@@ -44,10 +44,10 @@ namespace CleanArch.Mvc
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            //services.AddDbContext<UniversityDBContext>(options =>
-            //{
-            //    options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));
-            //});
+            services.AddDbContext<UniversityDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
